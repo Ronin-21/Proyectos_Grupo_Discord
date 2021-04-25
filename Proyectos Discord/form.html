@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="titulo">formulario de inscripción</h1>
+
+        <!-- DATOS PERSONALES -->
+
+        <div class="form-container-datos">
+            <h3 class="subtitulo">datos personales</h3>
+            <form class="form">
+                <input class="form__input" type="text" placeholder="Nombre">
+                <input class="form__input" type="text" placeholder="Apellido">
+                <input class="form__input" type="text" placeholder="Dirección">
+                <input class="form__input" type="text" placeholder="Teléfono">
+                <input class="form__input" type="email" placeholder="Correo Electrónico">
+                <input class="form__input" type="text" placeholder="Documento">
+                <label class="label" for="nacimiento">Fecha de nacimiento</label>
+                <input class="form__input" type="date" id="nacimiento">
+            </form>
+        </div>
+
+        <!-- DATOS INSTITUCION -->
+
+        <div class="form-container-inst">
+            <h3 class="subtitulo">datos de la institución</h3>
+            <form class="form">
+                <input class="form__input" type="text" placeholder="Nº de contrato">
+                <input class="form__input" type="text" placeholder="Persona que atendió">
+                <label class="label" for="inscripcion">Fecha de inscripción</label>
+                <input class="form__input" type="date" id="inscripcion">
+            </form>
+        </div>
+
+        <!-- CAPACITACION -->
+
+        <div class="form-container-cap">
+            <h3 class="subtitulo">capacitación</h3>
+            <form class="form">
+                <div class="form__list">
+                    <label for="curso">Curso</label>
+                    <input list="cursos" id="curso" placeholder="Elija un curso">
+                    <datalist id="cursos">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </datalist>
+                </div>
+                <div class="form__list">
+                    <label for="horario">Horario</label>
+                    <input list="horarios" id="horario" placeholder="Elija un horario">
+                    <datalist id="horarios">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </datalist>
+                </div>
+                <div class="form__check">
+                    <h3 class="subtitulo">Días</h3>
+                    <label for="lunes">Lunes</label>
+                    <input type="checkbox" id="lunes">
+                    <label for="martes">Martes</label>
+                    <input type="checkbox" id="martes">
+                    <label for="miercoles">Miércoles</label>
+                    <input type="checkbox" id="miercoles">
+                    <label for="jueves">Jueves</label>
+                    <input type="checkbox" id="jueves">
+                </div>
+            </form>
+        </div>
+
+        <!-- PLAN DE PAGO -->
+
+        <div class="form-container-plan">
+            <h3 class="subtitulo">plan de pago</h3>
+            <form class="form-planpago">
+                <div class="form-planpago__input">
+                    <input type="radio" name="radiobutton" id="contado">
+                    <label for="contado">Contado</label>
+                    <input type="radio" name="radiobutton" id="credito">
+                    <label for="credito">Crédito</label>
+                </div>
+                <div>
+                    <label for="moneda">Moneda</label>
+                    <select name="monedas" id="moneda">
+                        <option value="peso">Pesos</option>
+                        <option value="dolar">Dólar</option>
+                        <option value="euro">Euros</option>
+                    </select>
+                    <label for="tarjeta">Tarjeta</label>
+                    <select name="tarjetas" id="tarjeta">
+                        <option value="mastercard">Mastercard</option>
+                        <option value="visa">Visa</option>
+                        <option value="naranja">Naranja</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <!-- BOTON ENVIAR -->
+
+        <div class="form-boton">
+            <input class="boton" type="submit">
+        </div>
+
+    </div>
+</body>
+
+</html>

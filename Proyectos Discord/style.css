@@ -1,0 +1,110 @@
+.container {
+    margin: 50px auto;
+    max-width: 1000px;
+    height: 800px;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    background: #C9D6FF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #E2E2E2, #C9D6FF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #E2E2E2, #C9D6FF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: grid;
+    grid-template-areas:
+        "titulo titulo"
+        "datos datos"
+        "inst inst"
+        "capacitacion planpago"
+        "boton boton";
+}
+
+/* GRID AREAS */
+
+.form-container-datos {
+    grid-area: datos;
+}
+
+.form-container-inst {
+    grid-area: inst;
+}
+
+.form-container-cap {
+    grid-area: capacitacion;
+}
+
+.form-container-plan {
+    grid-area: planpago;
+}
+
+.form-boton {
+    align-self: center;
+    justify-self: center;
+    grid-area: boton;
+}
+
+/* ----- ----- */
+
+.titulo {
+    text-transform: uppercase;
+    text-align: center;
+    grid-area: titulo;
+    color: #660019;
+}
+
+.subtitulo {
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container-datos>form>label,
+.form-container-inst>form>label {
+    font-weight: bold;
+}
+
+.form-planpago__input {
+    padding-bottom: 10px;
+}
+
+.form-planpago__input>label {
+    padding-right: 10px;
+}
+
+.form__input,
+.form__list,
+.form__check {
+    margin: 5px 0;
+    outline: none;
+    border: none;
+}
+
+.form__input {
+    border-bottom: 1px solid #365aad;
+    background: linear-gradient(to bottom, transparent, #E2E2E2);
+}
+
+.form__input:hover {
+    border-bottom: 1px solid #57bfff;
+}
+
+.boton {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #365aad;
+    font-size: 20px;
+    color: #fff;
+    transition: .2s ease-out all;
+}
+
+.boton:hover {
+    background-color: #57bfff;
+    color: #000;
+}
